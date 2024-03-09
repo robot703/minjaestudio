@@ -1,0 +1,33 @@
+export default[{
+    id : 0,
+    title: "청주지역 기업문제 해결을 위한 아이디어톤",
+    date: "2022.12.09",
+    image: require("../assets/청주아이디어톤.png"),
+    rating:"대상",
+    content: "",
+    },
+    {
+    id : 1,
+    title: "제10회 대한민국 SW융합 해커톤",
+    date: "2023.08.27",
+    image: require("../assets/해커톤.png"),
+    rating:"우수상",
+    content: "",
+    },
+    {
+    id : 2,
+    title: "제10회 전국 ICT 융합 공모전",
+    date: "2023.11.09",
+    image:require("../assets/ICT융합 공모전.png"),
+    rating:"장려상",
+    content: "",
+    },
+    {
+    id : 3,
+    title: "충북대 GOOD 아이디어 공모전",
+    date: "2023.11.10",
+    image: require("../assets/굿아이디어.png"),
+    rating:"장려상",
+    content: "",
+    },
+];

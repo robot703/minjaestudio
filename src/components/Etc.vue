@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       flag: false,
-      color: '#FFF7A3',
+      color: '#C0C5CE',
       hovered: false,
       nickname: '',
       comment: '',
