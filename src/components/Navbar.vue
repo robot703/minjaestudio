@@ -47,10 +47,10 @@ export default {
 
     .center-navbar {
         float: left;
-        margin: 25px 60px; /* 여백 조정 */
+        margin: 4vh 10vh; /* 여백 조정 */
     }
     .nav-link{
-        margin: 10px 30px 0 30px;
+        margin: 1vh 4vh 0 4vh;
     }
     
     #navcolor{
