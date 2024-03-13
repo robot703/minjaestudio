@@ -20,40 +20,41 @@
     <div class="modal-overlay" v-if="flag">
       <div class="modal-container">
         <div class="contest-info">
-          <h3>{{ 원룸들[누른거].title }}</h3>
+          <h3><strong>{{ datas[누른거].title }}</strong></h3>
           <table>
             <tr>
               <td><strong>날짜</strong></td>
-              <td>{{ 원룸들[누른거].date }}</td>
+              <td>{{ datas[누른거].date }}</td>
             </tr>
             <tr>
               <td><strong>주최자</strong></td>
-              <td>{{ 원룸들[누른거].organizer }}</td>
+              <td>{{ datas[누른거].organizer }}</td>
             </tr>
             <tr>
               <td><strong>수상 제목</strong></td>
-              <td>{{ 원룸들[누른거].awardTitle }}</td>
+              <td>{{ datas[누른거].awardTitle }}</td>
             </tr>
             <tr>
               <td><strong>수상</strong></td>
-              <td>{{ 원룸들[누른거].award }}</td>
+              <td>{{ datas[누른거].award }}</td>
             </tr>
             <tr>
               <td><strong>상금</strong></td>
-              <td>{{ 원룸들[누른거].prize }}</td>
+              <td>{{ datas[누른거].prize }}</td>
             </tr>
             <tr>
               <td><strong>수상 내역</strong></td>
-              <td>{{ 원룸들[누른거].description }}</td>
+              <td>{{ datas[누른거].description }}</td>
             </tr>
           </table>
           <h4>작품 주요 기능</h4>
           <ul>
-            <li v-for="(feature, index) in 원룸들[누른거].features" :key="index">{{ feature }}</li>
+            <li v-for="(feature, index) in datas[누른거].features" :key="index">{{ feature }}</li>
           </ul>
         </div>
-        <div class="contest-image">
-          <img :src="원룸들[누른거].imageUrl" alt="Contest Image" />
+        <div class="contest-image" >    
+          <video :src="datas[누른거].image2" alt="Contest Image" autoplay muted loop/>
+          <img :src="datas[누른거].image3" style="width: 50vh; height: 60vh; margin-top: -60vh;"/>
         </div>
         <button class="close-button" @click="closeModal">×</button>
       </div>
@@ -70,7 +71,7 @@ export default {
       movies: data,
       flag: false,
       누른거: null,
-      원룸들: [...data],
+      datas: [...data],
     };
   },
   methods: {
@@ -211,9 +212,8 @@ export default {
   cursor: pointer;
 }
 
-.contest-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.contest-image video {
+  max-width: 100vh;
+  height: 60vh;
 }
 </style>
