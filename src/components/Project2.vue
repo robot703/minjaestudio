@@ -1,5 +1,9 @@
 <template>
   Project2입니다
+  //hello world 출력
+  
+
+  
 </template>
 
 <script>
