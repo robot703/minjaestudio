@@ -32,9 +32,9 @@
         <div v-for="(position, index) in randomPositions" :key="index" class="randombox" 
           v-bind:style="{ top: position.top + 'vh', left: position.left + 'vh' ,backgroundColor: color  }">
           <!-- 여기에 사용자 데이터를 표시합니다 -->
-            <p>{{ index }}</p>
-            <p>{{ userData[index].nickname }}</p>
-            <p>{{ userData[index].comment }}</p>
+          <p>{{ index }}</p>
+          <p v-if="userData[index]">{{ userData[index].nickname }}</p>
+          <p v-if="userData[index]">{{ userData[index].comment }}</p>
         </div>
       </div>
     </div>
@@ -59,6 +59,7 @@ export default {
     };
   },
   components: {
+    // eslint-disable-next-line vue/no-unused-components
     Navbar,
     Logo,
   },
@@ -73,7 +74,7 @@ export default {
     closeModal() {
       this.flag = false;
     },
-    saveAndClose(event) {
+    saveAndClose() {
 
       const newData = {
         id: Date.now(),
